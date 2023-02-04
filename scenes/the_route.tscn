@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl3c1iqfoj4dj"]
+
+[ext_resource type="Script" path="res://scripts/the_route.gd" id="1_ckk3n"]
+[ext_resource type="PackedScene" uid="uid://bgf0ahiqx4rxf" path="res://scenes/character.tscn" id="3_2gsq6"]
+
+[sub_resource type="Curve2D" id="Curve2D_41uek"]
+bake_interval = 14.36
+_data = {
+"points": PackedVector2Array(-260.931, -143.024, 260.931, 143.024, -136, -86, 0, 0, 0, 0, 119, -71, 0, 0, 0, 0, 400, -55, 0, 0, 0, 0, 761, -124, 0, 0, 0, 0, 434, 109, 0, 0, 0, 0, 710, 415, 0, 0, 0, 0, 264, 358, 0, 0, 0, 0, -72, 271, 0, 0, 0, 0, -195, 162)
+}
+point_count = 9
+
+[node name="the route" type="Node2D"]
+position = Vector2(317, 152)
+script = ExtResource("1_ckk3n")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_41uek")
+
+[node name="character" parent="Path2D" instance=ExtResource("3_2gsq6")]
+position = Vector2(-136, -86)
+rotation = 0.501406
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
