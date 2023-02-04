@@ -17,5 +17,5 @@ func _process(delta):
 		_i.global_rotation = 0
 
 func _on_timer_timeout():
-	var spawn = preload("res://scenes/character.tscn").instantiate()
+	var spawn = preload("res://objects/character.tscn").instantiate()
 	$Path2D.add_child(spawn)

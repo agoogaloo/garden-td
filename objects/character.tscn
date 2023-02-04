@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bgf0ahiqx4rxf"]
 
-[ext_resource type="Texture2D" uid="uid://bfyn8ufd3mjh8" path="res://sprites/icon.svg" id="1_wlae3"]
+[ext_resource type="Texture2D" uid="uid://bfyn8ufd3mjh8" path="res://sprites/icon.svg" id="1_cqdes"]
 
 [node name="PathFollow2D" type="PathFollow2D"]
 scale = Vector2(1.68012, 1.68012)
@@ -10,7 +10,7 @@ scale = Vector2(1.68012, 1.68012)
 [node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(4.76837e-07, -4.76837e-07)
 scale = Vector2(1.4375, 1.4375)
-texture = ExtResource("1_wlae3")
+texture = ExtResource("1_cqdes")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
 position = Vector2(-18, -51)
